@@ -1,4 +1,5 @@
-# ClientAngular( server code appear in https://github.com/danies8/server in node js)
+# ClientAngular
+(Server code appear in https://github.com/danies8/server in node js)
 <ul>
             <li >Presents list of standups filter by team member</li>
             <li  >Using RXJS operators</li>
