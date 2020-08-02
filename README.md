@@ -1,4 +1,28 @@
 # ClientAngular
+<ul>
+            <li >Presents list of standups filter by team member</li>
+            <li  >Using RXJS operators</li>
+            <li >Using node.js api</li>
+            <ul>
+                <li >Get all team members</li>
+                <li Get all projects</li>
+                <li >Get all standups</li>
+                <li >Get standups filter by team member</li>
+                <li >Post standup</li>
+            </ul>
+             <li >Using Animation</li>
+            <li >Use share features modules</li>
+            <li >Using Spinner</li>
+            <li >Cstom Preloading Strategy for list of standups</li>
+            <li>UI's errors handling</li>
+          </ul>
+
+
+
+
+
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.5.
 
@@ -29,20 +53,3 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 
-<ul>
-            <li >Presents list of standups filter by team member</li>
-            <li  >Using RXJS operators</li>
-            <li >Using node.js api</li>
-            <ul>
-                <li >Get all team members</li>
-                <li Get all projects</li>
-                <li >Get all standups</li>
-                <li >Get standups filter by team member</li>
-                <li >Post standup</li>
-            </ul>
-             <li >Using Animation</li>
-            <li >Use share features modules</li>
-            <li >Using Spinner</li>
-            <li >Cstom Preloading Strategy for list of standups</li>
-            <li>UI's errors handling</li>
-          </ul>
