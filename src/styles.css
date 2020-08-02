@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
+
+div.card-header {
+    font-size: large;
+   }
+   
+   div.card {
+     margin-top: 10px;
+   }
+   div.panel-heading{
+    font-weight: bolder;
+    font-size: xx-large;
+    background-color:orange
+   }
+
+   .navbar-light{
+     background-color:rgba(255, 68, 0, 0.534)
+   }
+
+   label{
+    color:orange;
+    font-weight: bolder;
+    font-size:medium;
+   }
+
+   button{
+    color:orange;
+    font-weight: bolder;
+    font-size:medium;
+   }
+
+   select{
+    color:orange;
+    font-size:medium;
+   }
+
+    input {
+    color: orange !important;
+    }
+
+
+    input::-moz-selection { /* Code for Firefox */
+      color: red !important;
+    }
+    
+    input::selection {
+      color: red !important;
+    }
+
+    a:link, a:visited {
+      color: red !important;
+      text-decoration: underline;
+      cursor: auto;
+    }
+    
+    a:link:active, a:visited:active {
+      color: red !important;
+    }

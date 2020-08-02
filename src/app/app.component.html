@@ -1,0 +1,26 @@
+<div class="fa fa-spinner spinner" *ngIf="loading"></div>
+
+<nav class='navbar navbar-expand navbar-light'>
+  <a class='navbar-brand h1'>{{pageTitle}}</a>
+  <ul class='navbar-nav menu'>
+    <li class="nav-item">
+      <a class='nav-link' routerLinkActive='active' [routerLink]="['/welcome']">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class='nav-link' routerLinkActive='active' [routerLink]="['/standups']" [routerLinkActiveOptions]="{ exact : true}">Standups List</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link"  routerLinkActive='active' [routerLink]="['/standups','add']" >Add New Standup</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link"  routerLinkActive='active' [routerLink]="['/addTeamMember']" >Add Team Member</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link"  routerLinkActive='active' [routerLink]="['/addProject']" >Add Project</a>
+    </li>
+  </ul>
+</nav>
+ <div class='container' [@slideInAnimation]="o.isActivated ? o.activatedRoute : ''">
+  <router-outlet #o="outlet"></router-outlet>
+</div>  
+

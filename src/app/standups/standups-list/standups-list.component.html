@@ -1,0 +1,43 @@
+<div class="panel panel-primary" >
+  <br>
+  <div class="panel-heading">
+      {{pageTitle}}
+  </div>
+  <br>
+  <div class="panel-body" >
+    <form [formGroup]="form" novalidate>
+
+      <div class="form-group">
+          <div style="float:right">
+            <label for="teamMembers">Choose a team member:&nbsp;&nbsp;</label>
+            <select formControlName="teamMembers" id="teamMembers" (change)="onChangeSelectedTeamMember($event.target.value)">
+              <option value= {{All}}>- Display All -</option>
+              <option *ngFor="let teamMember of teamMembers$ | async" [value]="teamMember._id">
+                {{teamMember.name}}
+              </option>
+            </select>
+         </div>
+      </div>
+
+      <br>
+      <br>
+      <br>
+      <div class="form-group" *ngIf="standups$ | async as standupsList">
+        <div *ngFor="let standUp of standupsList" class="standupList" >
+          <b>{{standUp.teamMember}}, {{standUp.createdOn}} </b>
+          <br>
+          <div><b>Project:</b>{{standUp.project}}</div>
+          <div> <b>Yesterday:</b>{{standUp.workYesterday}}</div>
+          <div> <b>Today:</b>{{standUp.workToday}}</div>
+          <div> <b>Impedent:</b>{{standUp.impediment}}</div>
+          <br>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div *ngIf="errorMessage"
+ class="alert alert-danger">
+  Error: {{ errorMessage }}
+</div> 

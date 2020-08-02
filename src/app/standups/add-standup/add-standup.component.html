@@ -1,0 +1,55 @@
+<div class="panel panel-primary">
+    <br>
+    <div class="panel-heading">
+        {{pageTitle}}
+    </div>
+    <br>
+    <div class="panel-body">
+        <form [formGroup]="form" novalidate (ngSubmit)="saveStandup()">
+            <div class="form-group">
+                <label class="control-label" for="teamMembers">Teams:&nbsp;&nbsp;</label>
+                <select class="col-md-5" formControlName="teamMembers" id="teamMembers"
+                    (change)="onChangeSelectedTeamMember($event.target.value)">
+                    <option *ngFor="let teamMember of teamMembers$ | async" [value]="teamMember._id">
+                        {{teamMember.name}}
+                    </option>
+                </select>
+                 <label class="control-label ml-5" for="projects">Projects:&nbsp;&nbsp;</label>
+                <select class="col-md-5" formControlName="projects" id="projects"
+                    (change)="onChangeSelectedProject($event.target.value)">
+                    <option *ngFor="let project of projects$ | async" [value]="project._id">
+                        {{project.name}}
+                    </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="workYesterday">Work Yesterday:</label>
+                <input class="col-md-12" type="text" formControlName="workYesterday" id="workYesterday" />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" for="workToday">Work Today:</label>
+                <input class="col-md-12" type="text" formControlName="workToday" id="workToday" />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" for="impediment">Impediment:</label>
+                <input class="col-md-12" type="text" formControlName="impediment" id="impediment" />
+            </div>
+
+            <div class="col-md-14">
+                <button class="col-md-2" type="button" (click)="cancelStandup()">
+                    Cancel
+                </button>
+                <span class="col-md-4"></span>
+                <button class="col-md-2" type="submit" [disabled]='!form.valid'>
+                    Save
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div *ngIf="errorMessage" class="alert alert-danger">
+    Error: {{ errorMessage }}
+</div>

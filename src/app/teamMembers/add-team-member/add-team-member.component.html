@@ -1,0 +1,29 @@
+<div class="panel panel-primary">
+    <br>
+    <div class="panel-heading">
+        {{pageTitle}}
+    </div>
+    <br>
+    <div class="panel-body">
+        <form [formGroup]="form" novalidate (ngSubmit)="saveTeamMember()">
+           
+            <div class="form-group">
+                <label class="control-label" for="name">Name:</label>
+                <input class="col-md-12" type="text" formControlName="name" id="name" />
+            </div>
+            <div class="col-md-14">
+                <button class="col-md-2" type="button" (click)="cancelTeamMember()">
+                    Cancel
+                </button>
+                <span class="col-md-4"></span>
+                <button class="col-md-2" type="submit" [disabled]='!form.valid'>
+                    Save
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div *ngIf="errorMessage" class="alert alert-danger">
+    Error: {{ errorMessage }}
+</div>
