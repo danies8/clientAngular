@@ -1,4 +1,4 @@
-# ClientAngular
+# ClientAngular( server code appear in https://github.com/danies8/server in node js)
 <ul>
             <li >Presents list of standups filter by team member</li>
             <li  >Using RXJS operators</li>
@@ -13,7 +13,7 @@
              <li >Using Animation</li>
             <li >Use share features modules</li>
             <li >Using Spinner</li>
-            <li >Cstom Preloading Strategy for list of standups</li>
+            <li >Custom Preloading Strategy for list of standups</li>
             <li>UI's errors handling</li>
           </ul>
 
