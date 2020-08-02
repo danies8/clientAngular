@@ -10,6 +10,8 @@
                 <li >Get all standups</li>
                 <li >Get standups filter by team member</li>
                 <li >Post standup</li>
+              <li >Post team memeber</li>
+              <li >Post project</li>
             </ul>
              <li >Using Animation</li>
             <li >Use share features modules</li>
