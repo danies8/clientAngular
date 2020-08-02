@@ -6,7 +6,7 @@
             <li >Using node.js api</li>
             <ul>
                 <li >Get all team members</li>
-                <li Get all projects</li>
+                <li> Get all projects</li>
                 <li >Get all standups</li>
                 <li >Get standups filter by team member</li>
                 <li >Post standup</li>
